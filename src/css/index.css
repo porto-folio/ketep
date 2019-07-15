@@ -1,0 +1,19 @@
+#header{
+    background-image: url(../img/mega2.jpg)
+}
+
+.icons{
+    font-size: 48px;
+}
+
+.progress.-lg {
+    height: 1.2rem;
+}
+
+.card-dusun{
+    background: white;
+    border: 1px solid lime;
+    border-radius: 10px;
+    width: 80%;
+    padding-bottom: 20px;
+}

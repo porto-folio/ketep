@@ -1,0 +1,15 @@
+{
+  "name": "ketep",
+  "version": "1.0.0",
+  "description": "Static Website for Ketep Village",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Zulfa Dhiaulhaq",
+  "license": "ISC",
+  "homepage": "https://porto-folio.github.io/ketep",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
