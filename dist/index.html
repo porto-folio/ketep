@@ -1,222 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Ini adalah website Desa Ketep yang dibuat oleh tim KKN UGM 2019">
     <meta name="keywords" content="ketep, desa, ketep pass, pass, merbabu, gunung, merapi, wisata, magelang">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="KKN UGM 2019">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://cdn.jsdelivr.net/npm/@inkline/inkline/dist/inkline.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="src/css/bulma.css">
+    <link rel="stylesheet" href="src/css/buefy.min.css">
+    <link rel="stylesheet" href="src/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@0.2.0/dist/css/bulma-divider.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css"> -->
     <link rel="stylesheet" href="src/css/index.css">
-    <title>Desa Ketep - Desa wisata dari Magelang</title>
+    <title>Desa Ketep</title>
 </head>
+
 <body>
-    <div id="app">
-        <i-container fluid style="padding-left: 0; padding-right: 0">
-            
-            <!-- Header -->
-            <i-row style="margin-left: 0; margin-right: 0">
-                <i-column xs id="beranda" style="padding-left: 0; padding-right: 0">
-                    
-                    <!-- Navigation Bar -->
-                    <i-navbar style="position: fixed; width: 100%; background: limegreen; opacity: 0.8; z-index: 999999;">
-                        <i-navbar-brand href="#beranda" style="color: white">Desa Ketep</i-navbar-brand>
-                        <i-navbar-items class="_justify-content-center">
-                                <i-nav size="lg">
-                                        <i-nav-item href="#beranda" active style="color: white">Beranda</i-nav-item>
-                                        <i-nav-item href="#geografis" style="color: white">Geografis</i-nav-item>
-                                        <i-nav-item href="#kependudukan" style="color: white">Kependudukan</i-nav-item>
-                                        <i-nav-item href="#produk-desa" style="color: white">Produk Desa</i-nav-item>
-                                        <i-nav-item href="#potensi-desa" style="color: white">Potensi Desa</i-nav-item>
-                                    </i-nav>
-                        </i-navbar-items>
-                    </i-navbar>
-                    <!-- End Navigation bar -->
+    <div id="app" v-cloak>
+        <section class="hero is-fullheight has-carousel is-desktop">
+            <div id="carousel-banner" class="hero-carousel">
+                <div class="item-1">
+                    <figure class="image is-fullwidth">
+                        <img src="src/img/desa-ketep.jpg" style="height: 100vh;" alt="">
+                    </figure>
+                </div>
+                <div class="item-2">
+                    <figure class="image is-fullwidth">
+                        <img src="src/img/gunung-hijau-farm.jpg" style="height: 100vh;" alt="">
+                    </figure>
+                </div>
+                <div class="item-3">
+                    <figure class="image is-fullwidth">
+                        <img src="src/img/ketep-pass-name.jpeg" style="height: 100vh;" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="hero-head">
+                <navigation-bar></navigation-bar>
+            </div>
+            <transition
+                appear
+                appear-to-class="animated tada"
+                appear-active-class="animated bounceIn"
+            >
+                <div class="hero-body">
+                    <div class="container has-text-centered" >
+                        <h1 class="title" style="color: white !important">
+                            DESA KETEP
+                        </h1>
+                        <h2 class="subtitle" style="color: white !important">
+                            Desa Wisata yang bertempat di Magelang, mempunyai dusun yang memiliki potensi wilayah masing-masing
+                        </h2>
+                    </div>
+                </div>
+            </transition>
+            <div class="hero-foot"></div>
+        </section>
 
-                    <!-- Main Header -->
-                    <i-header fullscreen id="header" :cover="true" class="_text-center _text-white">
-                        <span class="d3">Desa Ketep</span>
-                        <p class="lead">This is a cover background header paragraph lorem ipsum dolor sit amet.</p>
-                    </i-header>
-                    <!-- End Main Header -->
+        <section id="visi-misi">
+            <a class="goto" name="vision-mision"></a>
+            <div class="container is-fluid" style="padding-left:20px; padding-right: 20px">
+                <div class="is-divider"></div>
+                <div class="columns is-mobile is-centered">
+                    <div class="column" data-aos="fade-right">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered">Visi</p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, impedit illum explicabo reprehenderit aliquid libero porro dicta perspiciatis assumenda! Excepturi assumenda dolorem facilis in commodi totam consequatur cum sunt illum
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                </i-column>
-            </i-row>
-            <!-- End Header -->
+                    <div class="column" data-aos="fade-left">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered">Misi</p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, impedit illum explicabo reprehenderit aliquid libero porro dicta perspiciatis assumenda! Excepturi assumenda dolorem facilis in commodi totam consequatur cum sunt illum
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- lokasi -->
+        <section id="lokasi">
+            <a class="goto" name="locate">&nbsp;</a>
+            <div class="container is-fluid" style="padding-left:20px; padding-right: 20px">
+                <div class="is-divider"></div>
+                <div
+                    class="columns is-mobile is-centered"
+                    style="padding-bottom: 20px"
+                    data-aos="fade-up">
+                    <h1 class="title">
+                        Lokasi
+                    </h1>
+                </div>
+                <div
+                    class="columns is-centered is-mobile"style="padding: 20px" data-aos="zoom-in">
+                    <figure class="image">
+                        <img src="src/img/peta-desa-ketep.jpg"  alt="">
+                    </figure>
+                </div>
 
-        <!-- Content -->
-            <!-- Content : Geografis -->
-            <i-row style="margin-left: 0; margin-right: 0; padding-bottom: 10px; padding-top: 10px">
-                <i-column xs="12" style="padding-bottom: 10px">
-                    <span id="geografis" class="h1"><i class="material-icons icons" style="vertical-align: text-top">location_on</i>Geografis</span>
-                </i-column>
-                <i-column xl="2" lg="3" md="2" sm="0" xs="0"></i-column>                
-                <i-column xl="8" lg="6" md="8" sm="12" xs="12">
-                    <img src="src/img/mega1.jpg" width="1000" height="400" class="image -responsive" alt="Responsive image">
-                </i-column>
-                <i-column xl="2" lg="3" md="2" sm="0" xs="0"></i-column>
-                <!-- <i-column xs="5">
-                    <table>
-                        <tr>
-                            <td>Luas Wilayah</td>
-                            <td>:............... </td>
-                        </tr>
-                        <tr>
-                            <td>Bagian Utara</td>
-                            <td>:............... </td>
-                        </tr>
-                        <tr>
-                            <td>Bagian Timur</td>
-                            <td>:............... </td>
-                        </tr>
-                        <tr>
-                            <td>Bagian Selatan</td>
-                            <td>:............... </td>
-                        </tr>
-                        <tr>
-                            <td>Bagian Barat</td>
-                            <td>:............... </td>
-                        </tr>
-                    </table>
-                </i-column> -->
-            </i-row>
-            <!-- End Content : Geografis -->
+                <section class="section mySection">
+                    <div class="columns is-centered is-mobile">
+                        <b-tabs v-model="activeTab" class="myTab is-fullwidth">
+                            <b-tab-item label="Dusun Ketep">
+                                <div class="columns is-desktop">
+                                    <div class="column" data-aos="fade-right">
+                                        <figure class="image">
+                                            <img src="src/img/peta-desa-ketep.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="column" data-aos="fade-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat voluptatem eos fuga perspiciatis quisquam blanditiis facilis distinctio ut suscipit? Tempore non vitae, ipsam repellat magnam omnis quia eius saepe.
+                                    </div>
+                                </div>
+                            </b-tab-item>            
+                            <b-tab-item label="Dusun Puluhan">
+                                <div class="columns is-desktop">
+                                    <div class="column" data-aos="fade-right">
+                                        <figure class="image">
+                                            <img src="src/img/peta-desa-ketep.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="column" data-aos="fade-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat voluptatem eos fuga perspiciatis quisquam blanditiis facilis distinctio ut suscipit? Tempore non vitae, ipsam repellat magnam omnis quia eius saepe.
+                                    </div>
+                                </div>
+                            </b-tab-item>
+                            <b-tab-item label="Dusun Gintung">
+                                <div class="columns is-desktop">
+                                    <div class="column" data-aos="fade-right">
+                                        <figure class="image">
+                                            <img src="src/img/peta-desa-ketep.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="column" data-aos="fade-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat voluptatem eos fuga perspiciatis quisquam blanditiis facilis distinctio ut suscipit? Tempore non vitae, ipsam repellat magnam omnis quia eius saepe.
+                                    </div>
+                                </div>
+                            </b-tab-item>
+                            <b-tab-item label="Dusun Gondangsari">
+                                <div class="columns is-desktop">
+                                    <div class="column" data-aos="fade-right">
+                                        <figure class="image">
+                                            <img src="src/img/peta-desa-ketep.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="column" data-aos="fade-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat voluptatem eos fuga perspiciatis quisquam blanditiis facilis distinctio ut suscipit? Tempore non vitae, ipsam repellat magnam omnis quia eius saepe.
+                                    </div>
+                                </div>
+                            </b-tab-item>
+                            <b-tab-item label="Dusun Dadapan">
+                                <div class="columns is-desktop">
+                                    <div class="column" data-aos="fade-right">
+                                        <figure class="image">
+                                            <img src="src/img/peta-desa-ketep.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="column" data-aos="fade-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat voluptatem eos fuga perspiciatis quisquam blanditiis facilis distinctio ut suscipit? Tempore non vitae, ipsam repellat magnam omnis quia eius saepe.
+                                    </div>
+                                </div>
+                            </b-tab-item>
+                        </b-tabs>
+                    </div>
+                </section>
+            </div>
+        </section>
 
-            <!-- Content: Kependudukan -->
-            <i-row style="margin-left: 0; margin-right: 0; background: limegreen; padding-bottom: 10px; padding-top: 10px">
-                <i-column xs="12" style="padding-bottom: 10px">
-                    <span id="kependudukan" class="h1" style="color: white"><i class="material-icons icons" style="vertical-align: text-top">people</i>Kependudukan</span>
-                </i-column>
-                <i-column xs="12">
-                    <i-row center-xs middle-xs>
-                        <i class="material-icons icons" style="vertical-align: text-top">chevron_left</i>
-                        <Dusun nama_dusun="Dusun Ketep" img_dusun="src/img/music1.jpg" val_0="50" val_1="40" val_2="10" val_3="90"></Dusun>
-                        <i class="material-icons icons" style="vertical-align: text-top">chevron_right</i>
-                    </i-row>
-                </i-column>
-            </i-row>
-            <!-- End Content : Kependudukan -->
+        <section id="kegiatan">
+            <a class="goto" name="activity">&nbsp;</a>
+            <div class="container is-fluid" style="padding-top:2rem; padding-left:20px; padding-right: 20px">
+                    <div class="is-divider"></div>
+                <div class="columns is-mobile is-centered" style="padding-bottom: 20px">
+                    <h1 class="title">
+                        Kegiatan Desa
+                    </h1>
+                </div>
+                <div class="columns is-centered is-desktop" style="padding: 20px">
+                    <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-8">
+                            <div class="tile">
+                                <div class="tile is-parent is-vertical">
+                                    <article class="tile is-child notification" data-aos="zoom-in">
+                                        <p class="title">PKK Desa</p>
+                                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut ex voluptatum beatae ipsum sequi ad adipisci quasi? Eum minus neque suscipit distinctio adipisci sint a tempore porro velit amet!</p>
+                                    </article>
+                                    <article class="tile is-child notification is-warning" data-aos="zoom-in">
+                                        <p class="title">PKK Dusun</p>
+                                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aspernatur voluptatum similique aut, asperiores eius dolor repudiandae iure quisquam itaque dolorem accusamus, nesciunt maxime fuga pariatur accusantium laboriosam optio ipsam!</p>
+                                    </article>
+                                </div>
+                                <div class="tile is-parent">
+                                    <article class="tile is-child notification is-info" data-aos="zoom-in">
+                                        <p class="title">PokDarWis</p>
+                                        <p class="subtitle">Singkatan dari Kelompok Sadar Wisata</p>
+                                        <figure class="image is-4by3">
+                                            <img src="src/img/ketep-pass-name.jpeg">
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-danger" data-aos="zoom-in">
+                                    <p class="title">Karang Taruna</p>
+                                    <p class="subtitle">blabalanbaalbalal</p>
+                                    <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quasi veritatis culpa similique quod. Iste aspernatur omnis quam fuga voluptate repellat harum ducimus voluptas fugiat, perspiciatis porro est ipsum eligendi?
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-success" data-aos="zoom-in">
+                                <div class="content">
+                                    <p class="title">Karnaval Desa</p>
+                                    <p class="subtitle">With even more content</p>
+                                    <div class="content">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis nisi magni beatae facilis quas porro quasi sunt assumenda deleniti atque. Beatae aliquid adipisci fugit inventore quo dolor explicabo qui consectetur!</p>
+                                        <figure class="image is-4by3">
+                                            <img src="src/img/ketep-pass-name.jpeg">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Content : Produk Desa -->
-            <i-row style="margin-left: 0; margin-right: 0;  padding-bottom: 10px; padding-top: 10px">
-                <i-column xs style="padding-bottom: 10px; padding-top: 10px">
-                    <span id="produk-desa" class="h1"><i class="material-icons icons" style="vertical-align: text-top">attach_money</i>Produk Desa</span>
-                </i-column>
-                <i-column xs="12">
-                    <i-row center-xs>
-                        <i-column xs="12">
-                                <h4 class="_text-center">Pertanian</h4>
-                        </i-column>
-                        <cardpertanian prod_title="Palawija" prod_img="src/img/1.jpg">
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </cardpertanian>
-                        <cardpertanian prod_title="Palawija" prod_img="src/img/1.jpg">
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </cardpertanian>
-                        <cardpertanian prod_title="Palawija" prod_img="src/img/1.jpg">
-                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </cardpertanian>
-                    </i-row>
-                    <i-row center-xs>
-                        <i-column xs="12">
-                            <h4 class="_text-center">Peternakan</h4>
-                        </i-column>
-                        <i-column xs="6">
-                            <img src="src/img/mega1.jpg" class="image -polaroid" alt="Polaroid" style="margin-bottom: 10px">
-                            <i-row>
-                                <i-column xs="4" style="text-align: start">
-                                    Dusun Ketep
-                                </i-column>
-                                <i-column xs="8">
-                                    <i-progress size="lg">
-                                        <i-progress-bar value="75">75</i-progress-bar>
-                                    </i-progress>
-                                </i-column>
-                            </i-row>
-                            <i-row>
-                                <i-column xs="4" style="text-align: start">
-                                    Dusun Gintung
-                                </i-column>
-                                <i-column xs="8">
-                                    <i-progress size="lg">
-                                        <i-progress-bar value="75">75</i-progress-bar>
-                                    </i-progress>
-                                </i-column>
-                            </i-row>
-                            <i-row>
-                                <i-column xs="4" style="text-align: start">
-                                    Dusun Puluhan
-                                </i-column>
-                                <i-column xs="8">
-                                    <i-progress size="lg">
-                                        <i-progress-bar value="75">75</i-progress-bar>
-                                    </i-progress>
-                                </i-column>
-                            </i-row>
-                            <i-row>
-                                <i-column xs="4" style="text-align: start">
-                                    Dusun Dadapan
-                                </i-column>
-                                <i-column xs="8">
-                                    <i-progress size="lg">
-                                        <i-progress-bar value="75">75</i-progress-bar>
-                                    </i-progress>
-                                </i-column>
-                            </i-row>
-                            <i-row>
-                                <i-column xs="4" style="text-align: start">
-                                    Dusun Gondangsari
-                                </i-column>
-                                <i-column xs="8">
-                                    <i-progress size="lg">
-                                        <i-progress-bar value="75">75</i-progress-bar>
-                                    </i-progress>
-                                </i-column>
-                            </i-row>
-                        </i-column>
-
-                    </i-row>
-
-                </i-column>
-            </i-row>
-            <!-- End Content Produk Desa -->
-
-            <!-- Content : Potensi Desa -->
-            <i-row style="margin-left: 0; margin-right: 0; background: limegreen; padding-bottom: 20px; padding-top: 10px">
-                <i-column xs="12" style="padding-bottom: 10px; padding-top: 10px">
-                    <span id="potensi-desa" class="h1"><i class="material-icons icons" style="vertical-align: text-top">poll</i>Potensi Desa</span>
-                </i-column>
-                <i-column :xs="true">
-                    <i-card>
-                        <template slot="header">Card Header</template>
-                        <img slot="image" src="src/img/1.jpg" alt="Card Image" />
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                        <template slot="footer">Card Footer</template>
-                    </i-card>
-                </i-column>
-                <i-column :xs="true">
-                    <i-card>
-                        <template slot="header">Card Header</template>
-                        <img slot="image" src="src/img/1.jpg" alt="Card Image" />
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                        <template slot="footer">Card Footer</template>
-                    </i-card>
-                </i-column>
-            </i-row>
-            <!-- End Content : Potensi Desa -->
-        <!-- End Content -->
+        <section id="potensi">
+            <a class="goto" name="activity">&nbsp;</a>
+            <div class="container is-fluid" style="padding-top:2rem; padding-left:20px; padding-right: 20px">
+                <div class="is-divider"></div>
+                <div class="columns is-mobile is-centered" style="padding-bottom: 20px">
+                    <h1 class="title">
+                        Potensi Desa
+                    </h1>
+                </div>
+            </div>
+        </section>
         
-        <!-- Footer -->
-            <i-row center-xs style="margin-left: 0; margin-right: 0; padding-bottom: 10px; padding-top: 10px">
-                <i-column style="height: 50px">
-                    <p>Created By KKN UGM 2019</p>
-                </i-column>
-            </i-row>
-        </i-container>
+        <section>
+            <div class="container is-fluid" style="padding-left:20px; padding-right: 20px">
+                <div class="is-divider"></div>
+                <div class="columns is-mobile is-centered" style="padding-bottom: 20px">
+                    <h1 class="title">
+                        Intermezo
+                    </h1>
+                </div>
+                <!-- Start Carousel -->
+                <section class="mySection" data-aos="zoom-out">
+                    <div id="carousel-demo" class="carousel">
+                        <div class="item-1">
+                            <figure class="image is-fullheight" style="padding: 10px">
+                                <iframe src="https://www.youtube.com/embed?v=rg_zwK_sSEY&list=RDrg_zwK_sSEY&start_radio=1" style="height: 100vh; width: 100%;" frameborder="0"></iframe>
+                            </figure>
+                        </div>
+                        <div class="item-2">
+                            <figure class="image is-fullheight" style="padding: 10px">
+                                <iframe src="https://www.youtube.com/embed?v=rg_zwK_sSEY&list=RDrg_zwK_sSEY&start_radio=1" style="height: 100vh; width: 100%;" frameborder="0"></iframe>
+                            </figure>
+                        </div>
+                        <div class="item-3">
+                            <figure class="image is-fullheight" style="padding: 10px">
+                                <iframe src="https://www.youtube.com/embed?v=rg_zwK_sSEY&list=RDrg_zwK_sSEY&start_radio=1" style="height: 100vh; width: 100%;" frameborder="0"></iframe>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Carousel -->
+            </div>
+        </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@inkline/inkline/dist/inkline.js"></script>
+
+    <template id="navigation-bar">
+        <b-navbar fixed-top transparent class="myNav">
+            <template slot="brand">
+                <b-navbar-item href="#app">
+                    <div style="display:contents; padding-left: 10px; border: 1px ">
+                        <img src="http://desaketep.magelangkab.go.id/desa/logo/KAB-PNG.png"></img>
+                        <span style="padding-left: 10px">DESA KETEP</span>
+                    </div>
+                </b-navbar-item>
+            </template>
+
+            <template slot="end">
+                <b-navbar-item tag="div" class="myNavbars">
+                    <b-navbar-item href="#app" style="color: black">
+                        Beranda
+                    </b-navbar-item>
+                    <b-navbar-item href="#locate" style="color: black">
+                        Lokasi
+                    </b-navbar-item>
+                    <b-navbar-item href="#activity" style="color: black">
+                        Kegiatan Desa
+                    </b-navbar-item>
+                    <b-navbar-item href="#activity" style="color: black">
+                        Potensi Desa
+                    </b-navbar-item>
+                    <b-navbar-item href="#activity" style="color: black">
+                        Tentang Desa
+                    </b-navbar-item>
+                </b-navbar-item>
+            </template>
+        </b-navbar>
+    </template>
+
+
+    <!-- template Dusun -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- Full bundle -->
+    
+    <script src="src/js/buefy.min.js"></script>
+    <!-- <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script> -->
+
+    <script src="src/js/bulma-carousel.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script> -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/index.js"></script>
+    
+    
+    <script>
+        AOS.init();
+
+        bulmaCarousel.attach('#carousel-banner', {
+            slidesToShow: 1,
+            infinite:true,
+            navigationKeys:false,
+            breakpoints:[{ changePoint: 480, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 640, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 } ]
+        });
+
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToShow: 1,
+            slidesToScroll:1,
+            loop:true,
+            pagination:false,
+            breakpoints:[{ changePoint: 360, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 640, slidesToShow: 1, slidesToScroll: 1 }, { changePoint: 768, slidesToShow: 1, slidesToScroll: 1 } ]
+		}); 
+    </script>
 </body>
 </html>
