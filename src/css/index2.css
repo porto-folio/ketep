@@ -1,0 +1,45 @@
+/* #header{
+    background-image: url(../img/desa-ketep.jpg)
+} */
+
+#header{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
+
+.icons{
+    font-size: 48px;
+}
+
+.progress.-lg {
+    height: 1.2rem;
+}
+
+
+.card-dusun{
+    background: white;
+    border: 1px solid lime;
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#sub_section {
+    position: relative;
+    height: auto;
+}
+
+#sub_section #link {
+    position: absolute;
+    left: 0px;
+    top: -60px;
+}
+
+.img_dusuns {
+    display: flex;
+    flex-direction: column;
+    column-count: 4;
+}
